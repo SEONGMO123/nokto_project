@@ -309,7 +309,7 @@ html > body {
   width: 100%;
   background-color: rgba(248, 243, 232, 0.6);
   -webkit-backdrop-filter: blur(6px);
-          backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   z-index: 999;
 }
@@ -520,7 +520,7 @@ html > body {
   border-radius: 10px 10px 0 0;
   margin-bottom: 1rem;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   aspect-ratio: 3.1/4;
   transition: 0.3s ease;
 }
@@ -655,7 +655,7 @@ html > body {
   border-radius: 14px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   aspect-ratio: 3.3/4;
 }
 .gallery-section .gallery-slider .swiper-slide .gallery-card .film-badge {
