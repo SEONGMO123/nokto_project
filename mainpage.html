@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NOKTO</title>
+
+    <!-- 테일윈드 css 불러오기 -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Lucide CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- 스와이퍼 불러오기 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- AOS 라이브러리 불러오기 -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- 공통 css 불러오기 -->
+    <link rel="stylesheet" href="css/common.css" />
+
+    <!-- 메인 css 불러오기 -->
+    <link rel="stylesheet" href="css/mainpage.css" />
+
+    <!-- 제이쿼리 불러오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- 공통 js 불러오기 -->
+    <script defer src="js/mainpage.js"></script>
+  </head>
+  <body>
+    <!-- pc이하부터 화살표 -->
+    <div class="right-controls">
+      <button class="icon-btn" id="scroll-home-controls">⬆</button>
+    </div>
+
+    <!-- 햄버거메뉴 -->
+    <div class="side-menu-modal" id="sideMenu">
+      <div class="side-menu-inner">
+        <div class="side-menu-top">
+          <button class="side-menu-close" id="sideMenuClose">×</button>
+          <div class="lang-switch"><i data-lucide="globe"></i></div>
+        </div>
+        <ul class="side-menu-list">
+          <li>
+            <a href="./pages/subpage_FilmFeel.html">FILM TYPES</a>
+          </li>
+          <li>
+            <a href="./pages/subpage_Gallery.html">GALLERY</a>
+          </li>
+          <li>
+            <a href="./pages/subpage_BrandStory.html">BRAND STORY</a>
+          </li>
+        </ul>
+        <div class="side-menu-footer">
+          <div class="footer-icons">
+            <a
+              href="mailto:https://tjdah8292@naver.com"
+              target="_blank"
+              aria-label="이메일"
+            >
+              <i data-lucide="mail"></i>
+            </a>
+            <a href="#" target="_blank" aria-label="깃허브">
+              <i data-lucide="github"></i>
+            </a>
+            <a
+              href="https://instagram.com/seong_mo8292"
+              target="_blank"
+              aria-label="인스타그램"
+            >
+              <i data-lucide="instagram"></i>
+            </a>
+          </div>
+          <p>© 2025 NOKTO</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 헤더 -->
+    <header class="main-header">
+      <div class="header-wrap">
+        <div class="header-logo">
+          <a href="./mainpage.html">NOKTO</a>
+        </div>
+        <nav class="header-nav">
+          <ul>
+            <li>
+              <a href="./pages/subpage_FilmFeel.html">FILM TYPES</a>
+            </li>
+            <li>
+              <a href="./pages/subpage_Gallery.html">GALLERY</a>
+            </li>
+            <li>
+              <a href="./pages/subpage_BrandStory.html">BRAND STORY</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-right">
+          <div class="lang-switch">
+            <a href="#" class="lang-toggle" aria-label="언어 변경">
+              <i data-lucide="globe"></i>
+            </a>
+          </div>
+          <button class="icon-btn" id="scroll-home">
+            <a href="#">HOME</a>
+          </button>
+        </div>
+        <div class="header-mobile-toggle" id="menu-toggle">
+          <a href="#">☰</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- 메인섹션 -->
+    <div class="main-section">
+      <section class="main-section-warp">
+        <!-- 	섹션-배너	 -->
+        <div class="section-banner" id="hero">
+          <div class="section-banner-inner">
+            <p class="banner-logo">NOKTO</p>
+            <h1 class="banner-title">INTO FILM</h1>
+            <p class="banner-subtitle">
+              기억은 흐릿하게 남고, 우리는 그것을 필름에 담는다
+            </p>
+            <a href="#emotion" class="banner-btn-start">시작하기</a>
+          </div>
+        </div>
+
+        <!-- 	메인섹션1(필름감성)	 -->
+        <div id="emotion" class="film-feel">
+          <div class="film-feel__inner">
+            <div class="film-feel__text">
+              <h2>필름 감성</h2>
+              <p>
+                디지털로 즐기는 아날로그 필름의 감성.<br />
+                입자감 있는 질감, 바랜 색감, 빛샘 효과까지<br />
+                마치 필름처럼, 하지만 더 간편하게.
+              </p>
+              <a href="./pages/subpage_FilmFeel.html">필름 종류 보기</a>
+            </div>
+            <div class="film-feel-preview">
+              <div class="film-feel-card">
+                <img
+                  src="./images/mainpage_FilmFeel.jpg"
+                  alt="Retro 400"
+                  class="film-img retro"
+                />
+                <p>Retro 400</p>
+              </div>
+              <div class="film-feel-card">
+                <img
+                  src="./images/mainpage_FilmFeel.jpg"
+                  alt="Classic BW"
+                  class="film-img bw"
+                />
+                <p>Classic BW</p>
+              </div>
+              <div class="film-feel-card">
+                <img
+                  src="./images/mainpage_FilmFeel.jpg"
+                  alt="Color Fade"
+                  class="film-img fade"
+                />
+                <p>Color Fade</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- 	메인섹션2(갤러리)	 -->
+        <div class="gallery-section">
+          <div class="gallery-inner">
+            <div class="gallery-header" data-aos="fade-up">
+              <h2>NOKTO GALLERY</h2>
+              <p>빛과 기억이 머문 순간들</p>
+            </div>
+            <div class="gallery-content">
+              <!-- 		슬라이더영역			 -->
+              <div class="gallery-slider">
+                <div class="swiper gallery-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide" data-aos="fade-up">
+                      <div class="gallery-card">
+                        <img
+                          src="./images/mainpage_Gallery_1.jpg"
+                          alt="gallery-retro"
+                          class="gallery-img retro"
+                        />
+                        <span class="film-badge">Retro</span>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="fade-up">
+                      <div class="gallery-card">
+                        <img
+                          src="./images/mainpage_Gallery_2.jpeg"
+                          alt="gallery-bw"
+                          class="gallery-img bw"
+                        />
+                        <span class="film-badge">BW</span>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="fade-up">
+                      <div class="gallery-card">
+                        <img
+                          src="./images/mainpage_Gallery_3.jpg"
+                          alt="gallery-fade"
+                          class="gallery-img fade"
+                        />
+                        <span class="film-badge">FADE</span>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="fade-up">
+                      <div class="gallery-card">
+                        <img
+                          src="./images/mainpage_Gallery_4.avif"
+                          alt="gallery-retro"
+                          class="gallery-img retro"
+                        />
+                        <span class="film-badge">Retro</span>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" data-aos=" fade-up">
+                      <div class="gallery-card">
+                        <img
+                          src="./images/mainpage_Gallery_5.jpg"
+                          alt="gallery-bw"
+                          class="gallery-img bw"
+                        />
+                        <span class="film-badge">BW</span>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" data-aos="fade-up">
+                      <div class="gallery-card">
+                        <img
+                          src="./images/mainpage_Gallery_6.jpg"
+                          alt="gallery-fade"
+                          class="gallery-img fade"
+                        />
+                        <span class="film-badge">FADE</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+              </div>
+              <!-- 		갤러리 텍스트			 -->
+              <div class="gallery-text" data-aos="fade-up">
+                <h3>NOKTO MOMENTS</h3>
+                <p>빛이 닿던 순간,<br />나는 너를 기억하기로 했다.</p>
+                <p>가끔은 흐릿함 속에 더 선명한 감정이 있다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-divider"></div>
+        <!-- 	메인섹션3(브랜드스토리)	 -->
+        <div class="story-section">
+          <p class="story-text">NOKTO with story</p>
+          <h2 class="story-title">BRAND STORY</h2>
+
+          <div class="story-card-wrap">
+            <div class="story-card">
+              <div class="story-top">
+                <span class="story-num">01</span>
+                <p>
+                  낡은 감성, <br />
+                  새로운 기술로 다시 태어나다
+                </p>
+              </div>
+              <div class="story-detail">
+                <p>
+                  필름이 가진 고유의 느낌을 <br />
+                  디지털 기술로 되살려낸 NOKTO의 첫 시작.
+                </p>
+              </div>
+            </div>
+
+            <div class="story-card">
+              <div class="story-top">
+                <span class="story-num">02</span>
+                <p>
+                  흐릿한 기억,<br />
+                  따뜻한 감정으로 스며들다
+                </p>
+              </div>
+              <div class="story-detail">
+                <p>
+                  흐릿하고 따뜻한 색감 속에서<br />
+                  오래 기억될 장면들을 담아냅니다.
+                </p>
+              </div>
+            </div>
+
+            <div class="story-card">
+              <div class="story-top">
+                <span class="story-num">03</span>
+                <p>빛과 그림자, <br />그 사이에 담긴 당신의 이야기</p>
+              </div>
+              <div class="story-detail">
+                <p>
+                  기억보다 더 깊은 이야기,<br />
+                  사진 너머의 감정을 전하고자 합니다.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <a href="./pages/subpage_BrandStory.html" class="story-link"
+            >BRAND STORY 보기 →</a
+          >
+        </div>
+
+        <div class="section-divider"></div>
+        <!-- 	메인섹션4(FAQ / CTA)	 -->
+        <div class="fc-section">
+          <div class="fc-inner">
+            <div class="faq-container">
+              <h2 class="fc-title">자주 묻는 질문</h2>
+              <ul class="faq-list">
+                <li class="faq-item">
+                  <div class="question">
+                    NOKTO 프로젝트는 어떤 프로젝트인가요? →
+                  </div>
+                  <div class="answer">
+                    NOKTO는 필름 카메라의 감성을 디지털적으로 재해석한 브랜드
+                    소개형 웹 프로젝트입니다.
+                  </div>
+                </li>
+                <li class="faq-item">
+                  <div class="question">
+                    포트폴리오에서 강조하고자 한 부분은 무엇인가요? →
+                  </div>
+                  <div class="answer">
+                    감성적이고 트렌디한 디자인, 직관적이고 반응형으로 잘 설계된
+                    사용자 경험입니다.
+                  </div>
+                </li>
+                <li class="faq-item">
+                  <div class="question">
+                    웹사이트에 사용된 기술 스택은 무엇인가요? →
+                  </div>
+                  <div class="answer">
+                    HTML, SCSS, JavaScript(jQuery), Swiper, AOS 애니메이션 등을
+                    활용하여 제작되었습니다.
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="cta-container">
+              <h2 class="fc-title">
+                NOKTO 프로젝트에 대해 더 궁금한 점이 있으신가요?
+              </h2>
+              <a href="#" class="cta-btn">프로젝트 문의하기</a>
+              <form class="cta-form">
+                <input
+                  type="email"
+                  placeholder="이메일 주소를 입력하세요"
+                  required
+                />
+                <button type="submit" class="submit-btn">업데이트 받기</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- 	푸터	 -->
+        <div class="footer">
+          <div class="footer-inner">
+            <p class="footer-logo">NOKTO</p>
+            <p class="footer-desc">
+              디지털 필름 감성을 담은 퍼블리셔 포트폴리오 프로젝트
+            </p>
+            <ul class="footer-icons">
+              <li>
+                <a href="#" target="_blank"><i data-lucide="github"></i></a>
+              </li>
+              <li>
+                <a href="mailto:https://tjdah8292@naver.com" aria-label="Email"
+                  ><i data-lucide="mail"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://instagram.com/seong_mo8292"
+                  target="_blank"
+                  aria-label="Instagram"
+                  ><i data-lucide="instagram"></i
+                ></a>
+              </li>
+            </ul>
+            <p class="copyright">© 2025 NOKTO. All rights reserved.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NOKTO FilmFeel</title>
+
+    <!-- 테일윈드 css 불러오기 -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Lucide CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- 스와이퍼 불러오기 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- AOS 라이브러리 불러오기 -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- 공통 css 불러오기 -->
+    <link rel="stylesheet" href="../css/common.css" />
+
+    <!-- 메인 css 불러오기 -->
+    <link rel="stylesheet" href="../css/subpage_FilmFeel.css" />
+
+    <!-- 제이쿼리 불러오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- 공통 js 불러오기 -->
+    <script defer src="../js/subpage_FilmFeel.js"></script>
+  </head>
+  <body>
+    <!-- pc이하부터 화살표 -->
+    <div class="right-controls">
+      <button class="icon-btn" id="scroll-home-controls">⬆</button>
+    </div>
+
+    <!-- 햄버거메뉴 -->
+    <div class="side-menu-modal" id="sideMenu">
+      <div class="side-menu-inner">
+        <div class="side-menu-top">
+          <button class="side-menu-close" id="sideMenuClose">×</button>
+          <div class="lang-switch"><i data-lucide="globe"></i></div>
+        </div>
+        <ul class="side-menu-list">
+          <li>
+            <a href="./subpage_FilmFeel.html">FILM TYPES</a>
+          </li>
+          <li>
+            <a href="./subpage_Gallery.html">GALLERY</a>
+          </li>
+          <li>
+            <a href="./subpage_BrandStory.html">BRAND STORY</a>
+          </li>
+        </ul>
+        <div class="side-menu-footer">
+          <div class="footer-icons">
+            <a
+              href="mailto:https://tjdah8292@naver.com"
+              target="_blank"
+              aria-label="이메일"
+            >
+              <i data-lucide="mail"></i>
+            </a>
+            <a href="#" target="_blank" aria-label="깃허브">
+              <i data-lucide="github"></i>
+            </a>
+            <a
+              href="https://instagram.com/seong_mo8292"
+              target="_blank"
+              aria-label="인스타그램"
+            >
+              <i data-lucide="instagram"></i>
+            </a>
+          </div>
+          <p>© 2025 NOKTO</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 헤더 -->
+    <header class="main-header">
+      <div class="header-wrap">
+        <div class="header-logo">
+          <a href="../mainpage.html">NOKTO</a>
+        </div>
+        <nav class="header-nav">
+          <ul>
+            <li>
+              <a href="./subpage_FilmFeel.html">FILM TYPES</a>
+            </li>
+            <li>
+              <a href="./subpage_Gallery.html">GALLERY</a>
+            </li>
+            <li>
+              <a href="./subpage_BrandStory.html">BRAND STORY</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-right">
+          <div class="lang-switch">
+            <a href="#" class="lang-toggle" aria-label="언어 변경">
+              <i data-lucide="globe"></i>
+            </a>
+          </div>
+          <button class="icon-btn" id="scroll-home">
+            <a href="#">HOME</a>
+          </button>
+        </div>
+        <div class="header-mobile-toggle" id="menu-toggle">
+          <a href="#">☰</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- 메인섹션 -->
+    <section>
+      <div class="film-types-page">
+        <!-- 1. 타이틀 -->
+        <div class="film-types-hero" id="hero">
+          <h1 class="page-title">FILM TYPES</h1>
+          <img
+            src="../images/subpage_FilmFeel_hero.png"
+            alt="필름 컬렉션 배경"
+            class="hero-bg"
+          />
+        </div>
+
+        <!-- 2. 감성 문장 -->
+        <div class="film-types-intro" data-aos="fade-up">
+          <p>빛은 다르게 번지고, 마음은 각기 흔들립니다.</p>
+        </div>
+
+        <!-- 3. 감성 키워드 -->
+        <div class="film-types-keywords" data-aos="fade-up">
+          <span>따뜻함</span>
+          <span>고요함</span>
+          <span>번짐</span>
+          <span>선명함</span>
+          <span>아련함</span>
+          <span>흐림</span>
+        </div>
+
+        <!-- 4. 필름 카드 9종 -->
+        <div class="film-types-masonry" data-aos="fade-up">
+          <div class="film-card retro">
+            <img src="../images/subpage_FilmFeel_1.jpg" alt="Retro 400" />
+            <h3>Retro 400</h3>
+            <p>시간을 감싸는 클래식한 톤</p>
+          </div>
+          <div class="film-card bw">
+            <img src="../images/subpage_FilmFeel_2.jpg" alt="Classic BW" />
+            <h3>Classic BW</h3>
+            <p>빛과 그림자의 순수한 대비</p>
+          </div>
+          <div class="film-card fade">
+            <img src="../images/subpage_FilmFeel_3.jpg" alt="Color Fade" />
+            <h3>Color Fade</h3>
+            <p>서서히 사라지는 기억의 색</p>
+          </div>
+          <div class="film-card soft">
+            <img src="../images/subpage_FilmFeel_4.jpg" alt="Daylight Soft" />
+            <h3>Daylight Soft</h3>
+            <p>부드러운 햇살을 담은 따스함</p>
+          </div>
+          <div class="film-card olive">
+            <img src="../images/subpage_FilmFeel_5.jpg" alt="Muted Olive" />
+            <h3>Muted Olive</h3>
+            <p>자연과 가장 가까운 색감</p>
+          </div>
+          <div class="film-card dusty">
+            <img src="../images/subpage_FilmFeel_6.jpg" alt="Dusty Mood" />
+            <h3>Dusty Mood</h3>
+            <p>감정을 닮은 바랜 핑크</p>
+          </div>
+          <div class="film-card velvet">
+            <img src="../images/subpage_FilmFeel_7.jpg" alt="Velvet 200" />
+            <h3>Velvet 200</h3>
+            <p>고요한 조명의 클래식함</p>
+          </div>
+          <div class="film-card bluehour">
+            <img src="../images/subpage_FilmFeel_8.jpg" alt="Blue Hour" />
+            <h3>Blue Hour</h3>
+            <p>해질 무렵의 차분한 감성</p>
+          </div>
+          <div class="film-card hazy">
+            <img src="../images/subpage_FilmFeel_9.jpg" alt="Hazy Film" />
+            <h3>Hazy Film</h3>
+            <p>희미한 기억처럼 흐릿한 빛</p>
+          </div>
+        </div>
+
+        <!-- 5.감성 문구 -->
+        <div class="film-quote" data-aos="fade-up">
+          <div class="quote-inner">
+            <p>“빛이 번질수록, 기억은 선명해진다.”</p>
+            <p>NOKTO는 순간을 한 장의 감성으로 남깁니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. 푸터 -->
+    <footer class="film-footer">
+      <div class="footer-inner">
+        <h2 class="footer-logo">NOKTO</h2>
+        <p class="footer-tagline">빛을 기록하고 감성을 나눕니다.</p>
+        <ul class="footer-nav">
+          <li>
+            <a href="./subpage_FilmFeel.html">FILM TYPES</a>
+          </li>
+          <li>
+            <a href="./subpage_Gallery.html">GALLERY</a>
+          </li>
+          <li>
+            <a href="./subpage_BrandStory.html">BRAND STORY</a>
+          </li>
+        </ul>
+        <div class="footer-icons">
+          <a href="#" aria-label="깃허브"><i data-lucide="github"></i></a>
+          <a href="mailto:https://tjdah8292@naver.com" aria-label="메일"
+            ><i data-lucide="mail"></i
+          ></a>
+          <a href="https://instagram.com/seong_mo8292" aria-label="인스타"
+            ><i data-lucide="instagram"></i
+          ></a>
+        </div>
+        <p class="footer-copy">© 2025 NOKTO. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

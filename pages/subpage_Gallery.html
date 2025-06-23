@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NOKTO Gallery</title>
+
+    <!-- 테일윈드 css 불러오기 -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Lucide CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- 폰트어썸 불러오기 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- 스와이퍼 불러오기 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- AOS 라이브러리 불러오기 -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- 공통 css 불러오기 -->
+    <link rel="stylesheet" href="../css/common.css" />
+
+    <!-- 메인 css 불러오기 -->
+    <link rel="stylesheet" href="../css/subpage_Gallery.css" />
+
+    <!-- 제이쿼리 불러오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- 공통 js 불러오기 -->
+    <script defer src="../js/subpage_Gallery.js"></script>
+  </head>
+  <body>
+    <!-- pc이하부터 화살표 -->
+    <div class="right-controls">
+      <button class="icon-btn" id="scroll-home-controls">⬆</button>
+    </div>
+
+    <!-- 햄버거메뉴 -->
+    <div class="side-menu-modal" id="sideMenu">
+      <div class="side-menu-inner">
+        <div class="side-menu-top">
+          <button class="side-menu-close" id="sideMenuClose">×</button>
+          <div class="lang-switch"><i data-lucide="globe"></i></div>
+        </div>
+        <ul class="side-menu-list">
+          <li>
+            <a href="./subpage_FilmFeel.html">FILM TYPES</a>
+          </li>
+          <li>
+            <a href="./subpage_Gallery.html">GALLERY</a>
+          </li>
+          <li>
+            <a href="./subpage_BrandStory.html">BRAND STORY</a>
+          </li>
+        </ul>
+        <div class="side-menu-footer">
+          <div class="footer-icons">
+            <a
+              href="mailto:https://tjdah8292@naver.com"
+              target="_blank"
+              aria-label="이메일"
+            >
+              <i data-lucide="mail"></i>
+            </a>
+            <a href="#" target="_blank" aria-label="깃허브">
+              <i data-lucide="github"></i>
+            </a>
+            <a
+              href="https://instagram.com/seong_mo8292"
+              target="_blank"
+              aria-label="인스타그램"
+            >
+              <i data-lucide="instagram"></i>
+            </a>
+          </div>
+          <p>© 2025 NOKTO</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 헤더 -->
+    <header class="main-header">
+      <div class="header-wrap">
+        <div class="header-logo">
+          <a href="../mainpage.html">NOKTO</a>
+        </div>
+        <nav class="header-nav">
+          <ul>
+            <li>
+              <a href="./subpage_FilmFeel.html">FILM TYPES</a>
+            </li>
+            <li>
+              <a href="./subpage_Gallery.html">GALLERY</a>
+            </li>
+            <li>
+              <a href="./subpage_BrandStory.html">BRAND STORY</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-right">
+          <div class="lang-switch">
+            <a href="#" class="lang-toggle" aria-label="언어 변경">
+              <i data-lucide="globe"></i>
+            </a>
+          </div>
+          <button class="icon-btn" id="scroll-home">
+            <a href="#">HOME</a>
+          </button>
+        </div>
+        <div class="header-mobile-toggle" id="menu-toggle">
+          <a href="#">☰</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- 메인섹션 -->
+
+    <!-- 1. 타이틀 -->
+    <section class="gallery-section" id="hero">
+      <div class="title-inner">
+        <div>
+          <h2 class="gallery-title">NOKTO GALLERY</h2>
+          <p class="gallery-desc">필름 감성으로 기록된 순간들을 감상해보세요</p>
+        </div>
+        <!-- 2. 타입 -->
+        <div class="gallery-filter-wrap">
+          <div class="filter-tabs">
+            <button class="filter-tab active" data-filter="emotion">
+              감성별
+            </button>
+            <button class="filter-tab" data-filter="type">필름 타입별</button>
+          </div>
+
+          <!-- 3. 타입옵션 -->
+          <div class="filter-options emotion-options active">
+            <button class="filter-option" data-category="all">전체</button>
+            <button class="filter-option" data-category="romantic">
+              로맨틱
+            </button>
+            <button class="filter-option" data-category="vintage">
+              빈티지
+            </button>
+            <button class="filter-option" data-category="dreamy">몽환</button>
+          </div>
+
+          <div class="filter-options type-options">
+            <button class="filter-option" data-category="all">전체</button>
+            <button class="filter-option" data-category="color">
+              컬러 필름
+            </button>
+            <button class="filter-option" data-category="mono">
+              흑백 필름
+            </button>
+            <button class="filter-option" data-category="lightleak">
+              라이트리크
+            </button>
+          </div>
+        </div>
+
+        <!-- 4. 갤러리카드 -->
+        <div class="gallery-grid">
+          <!-- 감성별 카드 9개 -->
+          <!-- 로맨틱 카드 3개 -->
+          <div
+            class="gallery-card"
+            data-tab="emotion"
+            data-emotion="romantic"
+            data-type="color"
+          >
+            <img src="../images/subpage_Gallery_1.avif" alt="romantic-1" />
+            <div class="card-info">
+              <p class="film-name">Sunset Whisper</p>
+              <button class="like-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+          </div>
+          <div
+            class="gallery-card"
+            data-tab="emotion"
+            data-emotion="romantic"
+            data-type="mono"
+          >
+            <img src="../images/subpage_Gallery_2.avif" alt="romantic-2" />
+            <div class="card-info">
+              <p class="film-name">Sea of Stillness</p>
+              <button class="like-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+          </div>
+          <div
+            class="gallery-card"
+            data-tab="emotion"
+            data-emotion="romantic"
+            data-type="lightleak"
+          >
+            <img src="../images/subpage_Gallery_3.avif" alt="romantic-3" />
+            <div class="card-info">
+              <p class="film-name">Warm Gaze</p>
+              <button class="like-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- 빈티지 카드 3개 -->
+          <div
+            class="gallery-card"
+            data-tab="emotion"
+            data-emotion="vintage"
+            data-type="color"
+          >
+            <img src="../images/subpage_Gallery_4.avif" alt="vintage-1" />
+            <div class="card-info">
+              <p class="film-name">Bicycle Alley</p>
+              <button class="like-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+          </div>
+          <div
+            class="gallery-card"
+            data-tab="emotion"
+            data-emotion="vintage"
+            data-type="mono"
+          >
+            <img src="../images/subpage_Gallery_5.avif" alt="vintage-2" />
+            <div class="card-info">
+              <p class="film-name">Quiet Noon</p>
+              <button class="like-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+          </div>
+          <div
+            class="gallery-card"
+            data-tab="emotion"
+            data-emotion="vintage"
+            data-type="lightleak"
+          >
+            <img src="../images/subpage_Gallery_6.avif" alt="vintage-3" />
+            <div class="card-info">
+              <p class="film-name">Iron Memory</p>
+              <button class="like-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- 몽환 카드 3개 -->
+          <div
+            class="gallery-card"
+            data-tab="emotion"
+            data-emotion="dreamy"
+            data-type="color"
+          >
+            <img src="../images/subpage_Gallery_7.avif" alt="dreamy-1" />
+            <div class="card-info">
+              <p class="film-name">Shimmer Mist</p>
+              <button class="like-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+          </div>
+          <div
+            class="gallery-card"
+            data-tab="emotion"
+            data-emotion="dreamy"
+            data-type="mono"
+          >
+            <img src="../images/subpage_Gallery_8.avif" alt="dreamy-3" />
+            <div class="card-info">
+              <p class="film-name">Echoing Silence</p>
+              <button class="like-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+          </div>
+          <div
+            class="gallery-card"
+            data-tab="emotion"
+            data-emotion="dreamy"
+            data-type="lightleak"
+          >
+            <img src="../images/subpage_Gallery_9.avif" alt="dreamy-3" />
+            <div class="card-info">
+              <p class="film-name">Blurred Light</p>
+              <button class="like-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- 타입별 카드 9개 -->
+          <!-- 컬러필름 카드 3개 -->
+          <div
+            class="gallery-card"
+            data-tab="type"
+            data-emotion="bright"
+            data-type="color"
+          >
+            <img src="../images/subpage_Gallery_10.jpg" alt="bright-1" />
+            <div class="card-info">
+              <p class="film-name">Forest Radiance</p>
+              <button class="like-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+          </div>
+          <div
+            class="gallery-card"
+            data-tab="type"
+            data-emotion="bright"
+            data-type="color"
+          >
+            <img src="../images/subpage_Gallery_11.avif" alt="bright-2" />
+            <div class="card-info">
+              <p class="film-name">Kodachrome Days</p>
+              <button class="like-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+          </div>
+          <div
+            class="gallery-card"
+            data-tab="type"
+            data-emotion="bright"
+            data-type="color"
+          >
+            <img src="../images/subpage_Gallery_12.jpg" alt="bright-3" />
+            <div class="card-info">
+              <p class="film-name">Color Splash</p>
+              <button class="like-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- 흑백필름 카드 3개 -->
+          <div
+            class="gallery-card"
+            data-tab="type"
+            data-emotion="black"
+            data-type="mono"
+          >
+            <img src="../images/subpage_Gallery_13.avif" alt="black-1" />
+            <div class="card-info">
+              <p class="film-name">Industrial Silence</p>
+              <button class="like-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+          </div>
+          <div
+            class="gallery-card"
+            data-tab="type"
+            data-emotion="black"
+            data-type="mono"
+          >
+            <img src="../images/subpage_Gallery_14.avif" alt="black-2" />
+            <div class="card-info">
+              <p class="film-name">Urban Echo</p>
+              <button class="like-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+          </div>
+          <div
+            class="gallery-card"
+            data-tab="type"
+            data-emotion="black"
+            data-type="mono"
+          >
+            <img src="../images/subpage_Gallery_15.avif" alt="black-3" />
+            <div class="card-info">
+              <p class="film-name">Still Water</p>
+              <button class="like-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- 라이트리크 카드 3개 -->
+          <div
+            class="gallery-card"
+            data-tab="type"
+            data-emotion="blur"
+            data-type="lightleak"
+          >
+            <img src="../images/subpage_Gallery_16.jpg" alt="blur-1" />
+            <div class="card-info">
+              <p class="film-name">Dream Leak</p>
+              <button class="like-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+          </div>
+          <div
+            class="gallery-card"
+            data-tab="type"
+            data-emotion="blur"
+            data-type="lightleak"
+          >
+            <img src="../images/subpage_Gallery_17.jpg" alt="blur-2" />
+            <div class="card-info">
+              <p class="film-name">Aurora Fade 오로</p>
+              <button class="like-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+          </div>
+          <div
+            class="gallery-card"
+            data-tab="type"
+            data-emotion="blur"
+            data-type="lightleak"
+          >
+            <img src="../images/subpage_Gallery_18.jpg" alt="blur-3" />
+            <div class="card-info">
+              <p class="film-name">Memory Burn</p>
+              <button class="like-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. 푸터 -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <h2 class="footer-logo">NOKTO</h2>
+        <p class="footer-desc">빛으로 남기는 감성의 순간, NOKTO</p>
+
+        <ul class="footer-nav">
+          <li>
+            <a href="./subpage_FilmFeel.html">FILM TYPES</a>
+          </li>
+          <li>
+            <a href="./subpage_Gallery.html">GALLERY</a>
+          </li>
+          <li>
+            <a href="./subpage_BrandStory.html">BRAND STORY</a>
+          </li>
+        </ul>
+
+        <div class="footer-icons">
+          <a href="#" aria-label="깃허브"><i data-lucide="github"></i></a>
+          <a href="mailto:https://tjdah8292@naver.com" aria-label="메일"
+            ><i data-lucide="mail"></i
+          ></a>
+          <a href="https://instagram.com/seong_mo8292" aria-label="인스타"
+            ><i data-lucide="instagram"></i
+          ></a>
+        </div>
+      </div>
+
+      <p class="footer-copy">© 2025 NOKTO. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

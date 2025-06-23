@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NOKTO BrandStory</title>
+
+    <!-- 테일윈드 css 불러오기 -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Lucide CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- 스와이퍼 불러오기 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- AOS 라이브러리 불러오기 -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- 공통 css 불러오기 -->
+    <link rel="stylesheet" href="../css/common.css" />
+
+    <!-- 메인 css 불러오기 -->
+    <link rel="stylesheet" href="../css/subpage_BrandStory.css" />
+
+    <!-- 제이쿼리 불러오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- 공통 js 불러오기 -->
+    <script defer src="../js/subpage_BrandStory.js"></script>
+  </head>
+  <body>
+    <!-- pc이하부터 화살표 -->
+    <div class="right-controls">
+      <button class="icon-btn" id="scroll-home-controls">⬆</button>
+    </div>
+
+    <!-- 햄버거메뉴 -->
+    <div class="side-menu-modal" id="sideMenu">
+      <div class="side-menu-inner">
+        <div class="side-menu-top">
+          <button class="side-menu-close" id="sideMenuClose">×</button>
+          <div class="lang-switch"><i data-lucide="globe"></i></div>
+        </div>
+        <ul class="side-menu-list">
+          <li>
+            <a href="./subpage_FilmFeel.html">FILM TYPES</a>
+          </li>
+          <li>
+            <a href="./subpage_Gallery.html">GALLERY</a>
+          </li>
+          <li>
+            <a href="./subpage_BrandStory.html">BRAND STORY</a>
+          </li>
+        </ul>
+        <div class="side-menu-footer">
+          <div class="footer-icons">
+            <a
+              href="mailto:https://tjdah8292@naver.com"
+              target="_blank"
+              aria-label="이메일"
+            >
+              <i data-lucide="mail"></i>
+            </a>
+            <a href="#" target="_blank" aria-label="깃허브">
+              <i data-lucide="github"></i>
+            </a>
+            <a
+              href="https://instagram.com/seong_mo8292"
+              target="_blank"
+              aria-label="인스타그램"
+            >
+              <i data-lucide="instagram"></i>
+            </a>
+          </div>
+          <p>© 2025 NOKTO</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 헤더 -->
+    <header class="main-header">
+      <div class="header-wrap">
+        <div class="header-logo">
+          <a href="../mainpage.html">NOKTO</a>
+        </div>
+        <nav class="header-nav">
+          <ul>
+            <li>
+              <a href="./subpage_FilmFeel.html">FILM TYPES</a>
+            </li>
+            <li>
+              <a href="./subpage_Gallery.html">GALLERY</a>
+            </li>
+            <li>
+              <a href="./subpage_BrandStory.html">BRAND STORY</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-right">
+          <div class="lang-switch">
+            <a href="#" class="lang-toggle" aria-label="언어 변경">
+              <i data-lucide="globe"></i>
+            </a>
+          </div>
+          <button class="icon-btn" id="scroll-home">
+            <a href="#">HOME</a>
+          </button>
+        </div>
+        <div class="header-mobile-toggle" id="menu-toggle">
+          <a href="#">☰</a>
+        </div>
+      </div>
+    </header>
+    <!-- 메인섹션 -->
+    <section>
+      <!-- 1. 타이틀 -->
+      <div class="brand-intro-section" id="hero">
+        <h2 class="brand-title" data-aos="fade-up">NOKTO BRAND STORY</h2>
+        <p class="brand-subtitle" data-aos="fade-up" data-aos-delay="200">
+          빛과 감성을 담은, NOKTO의 시작
+        </p>
+      </div>
+      <!-- 2. 밸류 -->
+      <div class="brand-values-section">
+        <div class="valus-inner">
+          <ul class="value-cards">
+            <li class="value-card" data-aos="fade-up">
+              <div class="icon">🌅</div>
+              <h3 class="value-title">빛의 기억</h3>
+              <p class="value-desc">
+                사라지지 않는 순간을<br />
+                필름 속에 담아냅니다.
+              </p>
+            </li>
+            <li class="value-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon">🪵</div>
+              <h3 class="value-title">따스한 결</h3>
+              <p class="value-desc">
+                아날로그의 질감과 감성,<br />
+                그 결을 담은 이미지.
+              </p>
+            </li>
+            <li class="value-card" data-aos="fade-up" data-aos-delay="400">
+              <div class="icon">⏳</div>
+              <h3 class="value-title">시간의 온도</h3>
+              <p class="value-desc">
+                시간이 지날수록<br />
+                더 깊어지는 감성의 온도.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 3. 타임라인 -->
+      <div class="brand-timeline-section">
+        <div class="timeline-inner">
+          <h2 class="timeline-title" data-aos="fade-up">NOKTO의 여정</h2>
+          <ul class="timeline-list">
+            <li class="timeline-item" data-aos="fade-up">
+              <span class="timeline-year">2022</span>
+              <div class="timeline-content">
+                <h3>빛을 담다</h3>
+                <p>첫 번째 필름 시리즈 출시로 감성을 담기 시작했습니다.</p>
+              </div>
+            </li>
+            <li class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+              <span class="timeline-year">2023</span>
+              <div class="timeline-content">
+                <h3>사람을 담다</h3>
+                <p>사용자와 소통하는 감성 갤러리 서비스 시작.</p>
+              </div>
+            </li>
+            <li class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+              <span class="timeline-year">2024</span>
+              <div class="timeline-content">
+                <h3>세계를 담다</h3>
+                <p>아시아와 유럽을 잇는 감성 필름 컬렉션 론칭.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 4.  -->
+      <div class="brand-philosophy-section">
+        <h2 class="philosophy-title" data-aos="fade-up">NOKTO의 철학</h2>
+        <p class="philosophy-desc" data-aos="fade-up" data-aos-delay="200">
+          우리는 빛을 기록합니다.<br />
+          그리고 그 빛 속 감정을 공유합니다.
+        </p>
+        <ul class="philosophy-keywords" data-aos="fade-up" data-aos-delay="400">
+          <li>#진심</li>
+          <li>#기록</li>
+          <li>#공감</li>
+          <li>#느림의미학</li>
+        </ul>
+      </div>
+
+      <!-- 5. -->
+      <div class="brand-message-section">
+        <p class="message-subtitle" data-aos="fade-up">빛은 지나가지만</p>
+        <h2 class="message-title" data-aos="fade-up" data-aos-delay="150">
+          감성은 남습니다
+        </h2>
+        <p class="message-text" data-aos="fade-up" data-aos-delay="300">
+          NOKTO는 감성의 잔상을 기록합니다.<br />
+          우리의 이야기는 아직, 계속됩니다.
+        </p>
+      </div>
+    </section>
+
+    <!-- 6. 푸터 -->
+    <footer class="brand-footer">
+      <div class="footer-inner">
+        <h2 class="footer-logo">NOKTO</h2>
+        <p class="footer-tagline">빛을 기록하고 감성을 나눕니다.</p>
+        <ul class="footer-nav">
+          <li>
+            <a href="./subpage_FilmFeel.html">FILM TYPES</a>
+          </li>
+          <li>
+            <a href="./subpage_Gallery.html">GALLERY</a>
+          </li>
+          <li>
+            <a href="./subpage_BrandStory.html">BRAND STORY</a>
+          </li>
+        </ul>
+        <div class="footer-icons">
+          <a href="#" aria-label="깃허브"><i data-lucide="github"></i></a>
+          <a href="mailto:https://tjdah8292@naver.com" aria-label="메일"
+            ><i data-lucide="mail"></i
+          ></a>
+          <a href="https://instagram.com/seong_mo8292" aria-label="인스타"
+            ><i data-lucide="instagram"></i
+          ></a>
+        </div>
+        <p class="footer-copy">© 2025 NOKTO. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
